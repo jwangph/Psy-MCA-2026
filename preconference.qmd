@@ -1,0 +1,2660 @@
+---
+title: "ΨMCA 2026"
+subtitle: "Pre-Conference Workgroup Meeting<br>Workgroup 1: Validation of Classification"
+author:
+  - "Dan Mungas"
+  - "Jingxuan Wang"
+date: "August 1, 2026"
+format:
+  revealjs:
+    theme: default
+    slide-number: c/t
+    date-format: "MMM D, YYYY"
+    footer: "ΨMCA 2026 | Workgroup 1 | Pre-Conference Meeting"
+    transition: slide
+    background-transition: fade
+    width: 1280
+    height: 720
+    margin: 0.08
+    center: false
+    navigation-mode: linear
+    slide-level: 2
+    progress: false
+    controls: true
+    loop: false
+    hash: false
+    title-slide-attributes:
+      data-background-color: "#1B3A5C"
+    include-in-header:
+      text: |
+        <style>
+        :root {
+          --navy: #1b3a5c;
+          --teal: #00878a;
+          --light-blue: #d6e8f7;
+          --soft-bg: #f4f7fb;
+          --green: #00875a;
+          --light-green: #e8f8f5;
+          --text: #2c3e50;
+          --muted: #66717e;
+        }
+
+        .reveal {
+          background: var(--soft-bg);
+        }
+
+        .reveal h2 {
+          color: var(--navy);
+          font-weight: 800;
+          margin-bottom: 0.35em;
+        }
+
+        .reveal p {
+          line-height: 1.4;
+        }
+
+        /* Agenda slide */
+        .agenda-grid {
+          display: grid;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 16px;
+          margin-top: 22px;
+        }
+
+        .agenda-card {
+          display: grid;
+          grid-template-columns: 58px minmax(0, 1fr) auto;
+          align-items: center;
+          column-gap: 16px;
+          min-height: 92px;
+          padding: 14px 18px;
+          background: #ffffff;
+          border: 1px solid var(--light-blue);
+          border-left: 6px solid var(--teal);
+          border-radius: 12px;
+          box-shadow: 0 5px 15px rgba(27, 58, 92, 0.10);
+        }
+
+        .agenda-number {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 52px;
+          height: 52px;
+          border-radius: 50%;
+          background: var(--navy);
+          color: #ffffff;
+          font-size: 21px;
+          font-weight: 800;
+        }
+
+        .agenda-content {
+          min-width: 0;
+          color: var(--text);
+          font-size: 22px;
+          font-weight: 650;
+          line-height: 1.15;
+        }
+
+        .agenda-time {
+          padding: 6px 11px;
+          background: var(--light-green);
+          color: var(--green);
+          border-radius: 999px;
+          font-size: 13px;
+          font-weight: 700;
+          white-space: nowrap;
+        }
+
+        .recording-note {
+          margin-top: 34px;
+          padding: 8px 12px;
+          color: #6f7782;
+          font-size: 0.42em;
+          line-height: 1.3;
+          text-align: left;
+          border-left: 4px solid var(--teal);
+        }
+
+        /* Introductions slide */
+        .intro-layout {
+          display: grid;
+          grid-template-columns: 0.92fr 1.08fr;
+          gap: 24px;
+          margin-top: 18px;
+          align-items: stretch;
+        }
+
+        .intro-welcome {
+          position: relative;
+          overflow: hidden;
+          min-height: 430px;
+          padding: 32px 36px;
+          background:
+            radial-gradient(
+              circle at 88% 12%,
+              rgba(0, 135, 138, 0.30) 0,
+              rgba(0, 135, 138, 0) 35%
+            ),
+            linear-gradient(145deg, #1b3a5c 0%, #214f76 100%);
+          color: #ffffff;
+          border-radius: 18px;
+          box-shadow: 0 12px 28px rgba(27, 58, 92, 0.18);
+        }
+
+        .intro-welcome::after {
+          content: "Ψ";
+          position: absolute;
+          right: -18px;
+          bottom: -88px;
+          color: rgba(255, 255, 255, 0.055);
+          font-size: 300px;
+          font-weight: 800;
+          line-height: 1;
+        }
+
+        .intro-eyebrow,
+        .intro-psymca,
+        .intro-tagline,
+        .intro-divider,
+        .intro-message,
+        .intro-highlight,
+        .intro-closing {
+          position: relative;
+          z-index: 1;
+        }
+
+        .intro-eyebrow {
+          color: #9edfe0;
+          font-size: 14px;
+          font-weight: 800;
+          letter-spacing: 0.18em;
+        }
+
+        .intro-psymca {
+          margin-top: 8px;
+          color: #ffffff;
+          font-size: 50px;
+          font-weight: 800;
+          line-height: 1;
+        }
+
+        .intro-tagline {
+          max-width: 90%;
+          margin-top: 12px;
+          color: var(--light-blue);
+          font-size: 16px;
+          line-height: 1.35;
+        }
+
+        .intro-divider {
+          width: 70px;
+          height: 5px;
+          margin: 25px 0 23px;
+          background: #00a3a6;
+          border-radius: 999px;
+        }
+
+        .intro-message {
+          color: #ffffff;
+          font-size: 19px;
+          line-height: 1.45;
+        }
+
+        .intro-highlight {
+          margin-top: 23px;
+          padding: 13px 15px;
+          background: rgba(255, 255, 255, 0.11);
+          border-left: 5px solid #5ad0d2;
+          border-radius: 8px;
+          color: #ffffff;
+          font-size: 18px;
+          font-weight: 700;
+          line-height: 1.35;
+        }
+
+        .intro-closing {
+          margin-top: 23px;
+          color: #9edfe0;
+          font-size: 22px;
+          font-weight: 800;
+        }
+
+        .intro-prompt {
+          min-height: 430px;
+          padding: 26px 28px;
+          background: #ffffff;
+          border: 1px solid var(--light-blue);
+          border-radius: 18px;
+          box-shadow: 0 12px 28px rgba(27, 58, 92, 0.10);
+        }
+
+        .intro-prompt h3 {
+          margin: 0 0 10px 0 !important;
+          padding: 0 0 11px 0 !important;
+          color: var(--navy) !important;
+          border-bottom: 3px solid var(--teal) !important;
+          font-size: 25px !important;
+          font-weight: 750;
+        }
+
+        .intro-instruction {
+          margin: 10px 0 15px;
+          color: var(--muted);
+          font-size: 15px;
+        }
+
+        .intro-item {
+          display: grid;
+          grid-template-columns: 40px minmax(0, 1fr);
+          align-items: center;
+          gap: 14px;
+          margin-bottom: 12px;
+          padding: 12px 14px;
+          background: var(--soft-bg);
+          border-left: 4px solid var(--teal);
+          border-radius: 10px;
+        }
+
+        .intro-number {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 36px;
+          height: 36px;
+          background: var(--teal);
+          color: #ffffff;
+          border-radius: 50%;
+          font-size: 12px;
+          font-weight: 800;
+        }
+
+        .intro-item-text {
+          color: var(--text);
+          font-size: 16px;
+          line-height: 1.25;
+        }
+
+        /* About Our Workgroup slide */
+        .wg-overview {
+          margin-top: 16px;
+        }
+
+        .wg-hero {
+          padding: 22px 28px;
+          background:
+            radial-gradient(
+              circle at 92% 20%,
+              rgba(0, 135, 138, 0.30),
+              rgba(0, 135, 138, 0) 34%
+            ),
+            linear-gradient(135deg, #1b3a5c 0%, #245d88 100%);
+          color: #ffffff;
+          border-radius: 16px;
+          box-shadow: 0 10px 24px rgba(27, 58, 92, 0.16);
+        }
+
+        .wg-label {
+          color: #9edfe0;
+          font-size: 13px;
+          font-weight: 800;
+          letter-spacing: 0.16em;
+        }
+
+        .wg-title {
+          margin-top: 5px;
+          color: #ffffff;
+          font-size: 34px;
+          font-weight: 800;
+          line-height: 1.1;
+        }
+
+        .wg-subtitle {
+          max-width: 90%;
+          margin-top: 8px;
+          color: #d6e8f7;
+          font-size: 16px;
+          line-height: 1.4;
+        }
+
+        .wg-grid {
+          display: grid;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 16px;
+          margin-top: 17px;
+        }
+
+        .wg-card {
+          min-height: 150px;
+          padding: 18px 18px 17px;
+          background: #ffffff;
+          border: 1px solid #d6e8f7;
+          border-top: 5px solid #00878a;
+          border-radius: 12px;
+          box-shadow: 0 5px 15px rgba(27, 58, 92, 0.08);
+        }
+
+        .wg-icon {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 34px;
+          height: 34px;
+          margin-bottom: 10px;
+          background: #e8f8f5;
+          color: #00878a;
+          border-radius: 50%;
+          font-size: 12px;
+          font-weight: 800;
+        }
+
+        .wg-card-title {
+          color: #1b3a5c;
+          font-size: 19px;
+          font-weight: 750;
+          margin-bottom: 7px;
+        }
+
+        .wg-card-text {
+          color: #5f6c78;
+          font-size: 13.5px;
+          line-height: 1.38;
+        }
+
+        .wg-comparison {
+          margin-top: 17px;
+          padding: 15px 18px;
+          background: #eef4f9;
+          border-radius: 12px;
+        }
+
+        .wg-comparison-title {
+          margin-bottom: 11px;
+          color: #1b3a5c;
+          font-size: 15px;
+          font-weight: 800;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+        }
+
+        .wg-pill-row {
+          display: grid;
+          grid-template-columns: 1fr auto 1fr auto 1fr;
+          align-items: center;
+          gap: 10px;
+        }
+
+        .wg-pill {
+          padding: 9px 12px;
+          background: #ffffff;
+          color: #1b3a5c;
+          border: 1px solid #c9deef;
+          border-radius: 999px;
+          text-align: center;
+          font-size: 13px;
+          font-weight: 700;
+        }
+
+        .wg-arrow {
+          color: #00878a;
+          font-size: 21px;
+          font-weight: 800;
+        }
+
+        .wg-validation {
+          display: grid;
+          grid-template-columns: auto repeat(3, 1fr);
+          gap: 9px;
+          align-items: center;
+          margin-top: 12px;
+        }
+
+        .wg-validation-label {
+          color: #66717e;
+          font-size: 12px;
+          font-weight: 700;
+        }
+        .wg-validation-item-long {
+          width: 1120px;
+          padding: 7px 9px;
+          font-size: 12px;
+          font-weight: 650;
+          background: #d6e8f7;
+          color: #1b3a5c;
+          border-radius: 999px;
+          text-align: center;
+        }
+
+        .wg-validation-item {
+          padding: 7px 9px;
+          background: #d6e8f7;
+          color: #1b3a5c;
+          border-radius: 7px;
+          text-align: center;
+          font-size: 12px;
+          font-weight: 650;
+        }
+
+        .wg-dataset {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          margin-top: 14px;
+          padding: 10px 15px;
+          background: #fff3cd;
+          border-left: 5px solid #f0a500;
+          border-radius: 8px;
+        }
+
+        .wg-dataset-label {
+          color: #8a6200;
+          font-size: 11px;
+          font-weight: 800;
+          letter-spacing: 0.12em;
+        }
+
+        .wg-dataset-name {
+          color: #5f4b12;
+          font-size: 14px;
+          font-weight: 700;
+        }
+
+        @media (max-width: 900px) {
+          .agenda-grid,
+          .intro-layout,
+          .wg-grid {
+            grid-template-columns: 1fr;
+          }
+
+          .wg-pill-row,
+          .wg-validation {
+            grid-template-columns: 1fr;
+          }
+
+          .wg-arrow {
+            display: none;
+          }
+        }
+        
+
+        /* Potential Project Ideas slide */
+        
+        .project-intro {
+          margin: 4px 0 18px;
+          color: var(--muted);
+          font-size: 15px;
+          font-style: italic;
+        }
+        
+        .project-grid {
+          display: grid;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 20px;
+          margin-top: 12px;
+        }
+        .project-card {
+          position: relative;
+          min-height: 270px;
+          padding: 20px 20px 18px;
+          background: #ffffff;
+          border: 1px solid var(--light-blue);
+          border-top: 5px solid var(--teal);
+          border-radius: 14px;
+          box-shadow: 0 6px 18px rgba(27, 58, 92, 0.09);
+        }
+        
+        .project-letter {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 42px;
+          height: 42px;
+          margin-bottom: 14px;
+          background: var(--navy);
+          color: #ffffff;
+          border-radius: 50%;
+          font-size: 17px;
+          font-weight: 800;
+        }
+        
+        .project-title {
+          margin-bottom: 10px;
+          color: var(--navy);
+          font-size: 20px;
+          font-weight: 800;
+          line-height: 1.2;
+        }
+        
+        .project-description {
+          color: #5f6c78;
+          font-size: 14px;
+          line-height: 1.45;
+        }
+        
+        .project-methods {
+          position: absolute;
+          left: 20px;
+          right: 20px;
+          bottom: 18px;
+          padding-top: 12px;
+          border-top: 1px solid #dce8f2;
+          color: var(--teal);
+          font-size: 12px;
+          font-weight: 700;
+          line-height: 1.35;
+        }
+        
+        .project-methods-label {
+          margin-right: 4px;
+          color: var(--muted);
+          font-size: 11px;
+          font-weight: 800;
+          letter-spacing: 0.06em;
+          text-transform: uppercase;
+        }
+        
+        .project-footer {
+          display: grid;
+          grid-template-columns: auto minmax(0, 1fr);
+          align-items: center;
+          gap: 14px;
+          margin-top: 18px;
+          padding: 14px 18px;
+          background: linear-gradient(135deg, var(--teal), #087477);
+          color: #ffffff;
+          border-radius: 12px;
+          box-shadow: 0 6px 16px rgba(0, 135, 138, 0.16);
+        }
+        
+        .project-footer-icon {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 42px;
+          height: 42px;
+          background: rgba(255, 255, 255, 0.16);
+          border-radius: 50%;
+          font-size: 22px;
+          font-weight: 800;
+        }
+        
+        .project-footer-title {
+          margin-bottom: 2px;
+          font-size: 15px;
+          font-weight: 800;
+        }
+        
+        .project-footer-text {
+          color: #e7ffff;
+          font-size: 13px;
+          line-height: 1.35;
+        }
+        
+        @media (max-width: 900px) {
+          .project-grid {
+            grid-template-columns: 1fr;
+          }
+        
+          .project-card {
+            min-height: 190px;
+          }
+        }
+
+        /* Structure and Roles slide */
+        
+        .roles-layout {
+          display: grid;
+          grid-template-columns: 0.72fr 1.28fr;
+          gap: 20px;
+          margin-top: 16px;
+        }
+        
+        .roles-leads {
+          padding: 24px;
+          background:
+            radial-gradient(
+              circle at 88% 12%,
+              rgba(0, 135, 138, 0.28),
+              rgba(0, 135, 138, 0) 35%
+            ),
+            linear-gradient(145deg, #1b3a5c 0%, #245d88 100%);
+          color: #ffffff;
+          border-radius: 16px;
+          box-shadow: 0 10px 24px rgba(27, 58, 92, 0.16);
+        }
+        
+        .roles-eyebrow {
+          color: #9edfe0;
+          font-size: 12px;
+          font-weight: 800;
+          letter-spacing: 0.16em;
+        }
+        
+        .roles-heading {
+          margin-top: 6px;
+          color: #ffffff;
+          font-size: 28px;
+          font-weight: 800;
+        }
+        
+        .roles-lead-card {
+          margin-top: 16px;
+          padding: 15px 16px;
+          background: rgba(255, 255, 255, 0.10);
+          border-left: 5px solid #5ad0d2;
+          border-radius: 10px;
+        }
+        
+        .roles-lead-name {
+          color: #ffffff;
+          font-size: 19px;
+          font-weight: 800;
+        }
+        
+        .roles-lead-role {
+          margin-top: 4px;
+          color: #d6e8f7;
+          font-size: 13px;
+          line-height: 1.35;
+        }
+        
+        .roles-shared {
+          margin-top: 18px;
+          padding-top: 15px;
+          border-top: 1px solid rgba(255, 255, 255, 0.22);
+        }
+        
+        .roles-shared-title {
+          color: #9edfe0;
+          font-size: 12px;
+          font-weight: 800;
+          letter-spacing: 0.08em;
+          text-transform: uppercase;
+        }
+        
+        .roles-shared-text {
+          margin-top: 6px;
+          color: #ffffff;
+          font-size: 13px;
+          line-height: 1.4;
+        }
+        
+        .roles-workflow {
+          display: grid;
+          gap: 12px;
+        }
+        
+        .role-step {
+          display: grid;
+          grid-template-columns: 46px minmax(0,1fr);
+          gap: 12px;
+          align-items: center;
+        
+          padding: 12px 15px;
+          margin-bottom: 10px;
+        
+          background: #ffffff;
+          border: 1px solid var(--light-blue);
+          border-left: 5px solid var(--teal);
+          border-radius: 12px;
+        
+          box-shadow: 0 5px 14px rgba(27,58,92,0.08);
+        }
+        
+        .role-step-title{
+          font-size:16px;
+        }
+        
+        .role-step-text{
+          font-size:12px;
+          line-height:1.3;
+        }
+        
+        .role-step-number {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 42px;
+          height: 42px;
+          background: var(--navy);
+          color: #ffffff;
+          border-radius: 50%;
+          font-size: 13px;
+          font-weight: 800;
+        }
+        
+        .roles-principle {
+          display: grid;
+          grid-template-columns: auto minmax(0, 1fr);
+          align-items: center;
+          gap: 13px;
+          margin-top: 14px;
+          padding: 13px 16px;
+          background: #fff3cd;
+          border-left: 5px solid #f0a500;
+          border-radius: 10px;
+        }
+        
+        .roles-principle-icon {
+          font-size: 24px;
+        }
+        
+        .roles-principle-title {
+          color: #6f5300;
+          font-size: 14px;
+          font-weight: 800;
+        }
+        
+        .roles-principle-text {
+          margin-top: 2px;
+          color: #6f5d24;
+          font-size: 12.5px;
+          line-height: 1.35;
+        }
+
+        /* Goals, expectations, and culture */
+        
+        .culture-grid {
+          display: grid;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 18px;
+          margin-top: 20px;
+        }
+        
+        .culture-panel {
+          min-height: 390px;
+          padding: 24px 22px;
+          border-radius: 16px;
+          box-shadow: 0 8px 20px rgba(27, 58, 92, 0.10);
+        }
+        
+        .culture-panel-navy {
+          background: linear-gradient(145deg, #1b3a5c, #245d88);
+          color: #ffffff;
+        }
+        
+        .culture-panel-blue {
+          background: #ffffff;
+          color: var(--text);
+          border: 1px solid var(--light-blue);
+          border-top: 6px solid var(--teal);
+        }
+        
+        .culture-panel-green {
+          background: #e8f8f5;
+          color: var(--text);
+          border-top: 6px solid var(--green);
+        }
+        
+        .culture-label {
+          margin-bottom: 8px;
+          font-size: 12px;
+          font-weight: 800;
+          letter-spacing: 0.12em;
+          text-transform: uppercase;
+        }
+        
+        .culture-panel-navy .culture-label {
+          color: #9edfe0;
+        }
+        
+        .culture-panel-blue .culture-label {
+          color: var(--teal);
+        }
+        
+        .culture-panel-green .culture-label {
+          color: var(--green);
+        }
+        
+        .culture-title {
+          margin-bottom: 20px;
+          font-size: 24px;
+          font-weight: 800;
+          line-height: 1.15;
+        }
+        
+        .culture-item {
+          display: grid;
+          grid-template-columns: 28px minmax(0, 1fr);
+          gap: 10px;
+          align-items: start;
+          margin-bottom: 16px;
+          font-size: 15px;
+          line-height: 1.35;
+        }
+        
+        .culture-check {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 24px;
+          height: 24px;
+          border-radius: 50%;
+          font-size: 12px;
+          font-weight: 800;
+        }
+        
+        .culture-panel-navy .culture-check {
+          background: rgba(255, 255, 255, 0.15);
+          color: #ffffff;
+        }
+        
+        .culture-panel-blue .culture-check {
+          background: #e8f8f5;
+          color: var(--green);
+        }
+        
+        .culture-panel-green .culture-check {
+          background: #ffffff;
+          color: var(--green);
+        }
+        
+        /* First-time attendees */
+        
+        .firsttime-layout {
+          display: grid;
+          grid-template-columns: 1.05fr 0.95fr;
+          gap: 22px;
+          margin-top: 18px;
+        }
+        
+        .firsttime-cards {
+          display: grid;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 14px;
+        }
+        
+        .firsttime-card {
+          min-height: 170px;
+          padding: 20px;
+          background: #ffffff;
+          border: 1px solid var(--light-blue);
+          border-top: 5px solid var(--teal);
+          border-radius: 14px;
+          box-shadow: 0 6px 16px rgba(27, 58, 92, 0.08);
+        }
+        
+        .firsttime-icon {
+          margin-bottom: 10px;
+          font-size: 28px;
+        }
+        
+        .firsttime-title {
+          margin-bottom: 7px;
+          color: var(--navy);
+          font-size: 18px;
+          font-weight: 800;
+        }
+        
+        .firsttime-text {
+          color: #5f6c78;
+          font-size: 13.5px;
+          line-height: 1.4;
+        }
+        
+        .firsttime-links {
+          min-height: 380px;
+          padding: 26px;
+          background: linear-gradient(145deg, #1b3a5c, #245d88);
+          color: #ffffff;
+          border-radius: 16px;
+          box-shadow: 0 10px 24px rgba(27, 58, 92, 0.16);
+        }
+        
+        .firsttime-links-title {
+          margin-bottom: 20px;
+          color: #ffffff;
+          font-size: 24px;
+          font-weight: 800;
+        }
+        
+        .firsttime-link {
+          margin-bottom: 17px;
+          padding-bottom: 15px;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+        }
+        
+        .firsttime-link-label {
+          color: #9edfe0;
+          font-size: 12px;
+          font-weight: 800;
+          letter-spacing: 0.07em;
+          text-transform: uppercase;
+        }
+        
+        .firsttime-link a {
+          color: #ffffff !important;
+          font-size: 14px;
+          font-weight: 700;
+          text-decoration: none;
+        }
+        
+        .firsttime-contact {
+          margin-top: 20px;
+          color: #d6e8f7;
+          font-size: 13px;
+          line-height: 1.5;
+        }
+        
+        /* Authorship */
+        
+        .authorship-intro {
+          margin: 4px 0 18px;
+          color: var(--muted);
+          font-size: 15px;
+          font-style: italic;
+        }
+        
+        .authorship-grid {
+          display: grid;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 14px;
+        }
+        
+        .authorship-card {
+          display: grid;
+          grid-template-columns: 46px minmax(0, 1fr);
+          gap: 14px;
+          align-items: start;
+          min-height: 100px;
+          padding: 16px 18px;
+          background: #ffffff;
+          border: 1px solid var(--light-blue);
+          border-left: 5px solid var(--teal);
+          border-radius: 12px;
+          box-shadow: 0 5px 14px rgba(27, 58, 92, 0.08);
+        }
+        
+        .authorship-number {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 40px;
+          height: 40px;
+          background: var(--navy);
+          color: #ffffff;
+          border-radius: 50%;
+          font-size: 14px;
+          font-weight: 800;
+        }
+        
+        .authorship-title {
+          margin-bottom: 4px;
+          color: var(--navy);
+          font-size: 17px;
+          font-weight: 800;
+        }
+        
+        .authorship-text {
+          color: #5f6c78;
+          font-size: 13px;
+          line-height: 1.4;
+        }
+        
+        .authorship-note {
+          display: grid;
+          grid-template-columns: auto minmax(0, 1fr);
+          gap: 13px;
+          align-items: center;
+          margin-top: 16px;
+          padding: 13px 17px;
+          background: #fff3cd;
+          border-left: 5px solid #f0a500;
+          border-radius: 10px;
+        }
+        
+        .authorship-note-icon {
+          font-size: 24px;
+        }
+        
+        .authorship-note-text {
+          color: #6f5d24;
+          font-size: 13px;
+          line-height: 1.4;
+        }
+        
+        /* Community and Discord */
+        
+        .community-layout {
+          display: grid;
+          grid-template-columns: 0.95fr 1.05fr;
+          gap: 22px;
+          margin-top: 20px;
+        }
+        
+        .discord-panel {
+          min-height: 390px;
+          padding: 28px;
+          background:
+            radial-gradient(
+              circle at 86% 14%,
+              rgba(90, 208, 210, 0.26),
+              rgba(90, 208, 210, 0) 36%
+            ),
+            linear-gradient(145deg, #1b3a5c, #245d88);
+          color: #ffffff;
+          border-radius: 18px;
+          box-shadow: 0 10px 25px rgba(27, 58, 92, 0.16);
+        }
+        
+        .discord-eyebrow {
+          color: #9edfe0;
+          font-size: 12px;
+          font-weight: 800;
+          letter-spacing: 0.14em;
+          text-transform: uppercase;
+        }
+        
+        .discord-title {
+          margin-top: 7px;
+          color: #ffffff;
+          font-size: 30px;
+          font-weight: 800;
+        }
+        
+        .discord-text {
+          margin-top: 14px;
+          color: #d6e8f7;
+          font-size: 15px;
+          line-height: 1.45;
+        }
+        
+        .discord-code {
+          margin: 26px 0;
+          padding: 15px 18px;
+          background: rgba(255, 255, 255, 0.12);
+          border: 1px solid rgba(255, 255, 255, 0.20);
+          border-radius: 10px;
+          color: #ffffff;
+          font-size: 22px;
+          font-weight: 800;
+          text-align: center;
+          letter-spacing: 0.02em;
+        }
+        
+        .discord-callout {
+          padding: 13px 15px;
+          background: rgba(0, 135, 138, 0.28);
+          border-left: 5px solid #5ad0d2;
+          border-radius: 8px;
+          color: #ffffff;
+          font-size: 13px;
+          line-height: 1.4;
+        }
+        
+        .community-links {
+          display: grid;
+          gap: 14px;
+        }
+        
+        .community-link-card {
+          padding: 17px 19px;
+          background: #ffffff;
+          border: 1px solid var(--light-blue);
+          border-left: 5px solid var(--teal);
+          border-radius: 12px;
+          box-shadow: 0 5px 14px rgba(27, 58, 92, 0.08);
+        }
+        
+        .community-link-label {
+          margin-bottom: 5px;
+          color: var(--teal);
+          font-size: 11px;
+          font-weight: 800;
+          letter-spacing: 0.08em;
+          text-transform: uppercase;
+        }
+        
+        .community-link-title {
+          color: var(--navy);
+          font-size: 17px;
+          font-weight: 800;
+        }
+        
+        .community-link-card a {
+          color: #5f6c78 !important;
+          font-size: 12.5px;
+          text-decoration: none;
+        }
+        
+        .community-recording {
+          padding: 13px 16px;
+          background: #e8f8f5;
+          color: #286b5b;
+          border-left: 5px solid var(--green);
+          border-radius: 10px;
+          font-size: 13px;
+          line-height: 1.4;
+        }
+
+        `/* Pre-Conference Reading List */
+        
+        .reading-intro {
+          margin: 4px 0 18px;
+          color: var(--muted);
+          font-size: 15px;
+          font-style: italic;
+        }
+        
+        .reading-grid {
+          display: grid;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 16px;
+        }
+        
+        .reading-panel {
+          min-height: 180px;
+          padding: 21px 20px;
+          border-radius: 15px;
+          box-shadow: 0 7px 18px rgba(27, 58, 92, 0.09);
+        }
+        
+        .reading-panel-blue {
+          background: #ffffff;
+          border: 1px solid var(--light-blue);
+          border-top: 6px solid var(--teal);
+        }
+        
+        .reading-panel-green {
+          background: var(--light-green);
+          border-top: 6px solid var(--green);
+        }
+        
+        .reading-panel-white {
+          background: #ffffff;
+          border: 1px solid #d7e3ed;
+          border-top: 6px solid var(--navy);
+        }
+        
+        .reading-label {
+          margin-bottom: 8px;
+          font-size: 11px;
+          font-weight: 800;
+          letter-spacing: 0.12em;
+          text-transform: uppercase;
+        }
+        
+        .reading-panel-blue .reading-label {
+          color: var(--teal);
+        }
+        
+        .reading-panel-green .reading-label {
+          color: var(--green);
+        }
+        
+        .reading-panel-white .reading-label {
+          color: var(--navy);
+        }
+        
+        .reading-title {
+          margin-bottom: 18px;
+          color: var(--navy);
+          font-size: 23px;
+          font-weight: 800;
+        }
+        
+        .reading-item {
+          margin-bottom: 17px;
+          padding-bottom: 14px;
+          border-bottom: 1px solid rgba(27, 58, 92, 0.12);
+        }
+        
+        .reading-item:last-child {
+          margin-bottom: 0;
+          padding-bottom: 0;
+          border-bottom: none;
+        }
+        
+        .reading-citation {
+          color: var(--navy);
+          font-size: 14px;
+          font-weight: 750;
+        }
+        
+        .reading-description {
+          margin-top: 3px;
+          color: #65717d;
+          font-size: 12.5px;
+          font-style: italic;
+          line-height: 1.35;
+        }
+        
+        .reading-link {
+          margin-top: 4px;
+          color: var(--teal);
+          font-size: 12px;
+          font-weight: 700;
+        }
+        
+        .reading-footer {
+          display: grid;
+          grid-template-columns: auto minmax(0, 1fr);
+          align-items: center;
+          gap: 13px;
+          margin-top: 17px;
+          padding: 12px 16px;
+          background: #fff3cd;
+          border-left: 5px solid #f0a500;
+          border-radius: 10px;
+        }
+        
+        .reading-footer-icon {
+          font-size: 23px;
+        }
+        
+        .reading-footer-text {
+          color: #6f5d24;
+          font-size: 13px;
+          line-height: 1.4;
+        }
+        
+        
+        /* Software and Technical Setup */
+        
+        .software-banner {
+          display: grid;
+          grid-template-columns: auto minmax(0, 1fr);
+          align-items: center;
+          gap: 14px;
+          margin: 8px 0 18px;
+          padding: 15px 19px;
+          background: linear-gradient(135deg, #1b3a5c, #245d88);
+          color: #ffffff;
+          border-radius: 13px;
+          box-shadow: 0 7px 18px rgba(27, 58, 92, 0.14);
+        }
+        
+        .software-banner-icon {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 42px;
+          height: 42px;
+          background: rgba(255, 255, 255, 0.14);
+          border-radius: 50%;
+          font-size: 20px;
+        }
+        
+        .software-banner-title {
+          color: #ffffff;
+          font-size: 17px;
+          font-weight: 800;
+        }
+        
+        .software-banner-text {
+          margin-top: 2px;
+          color: #d6e8f7;
+          font-size: 12.5px;
+        }
+        
+        .software-layout {
+          display: grid;
+          grid-template-columns: 0.9fr 1.1fr;
+          gap: 20px;
+        }
+        
+        .software-poll {
+          padding: 20px;
+          background: #ffffff;
+          border: 1px solid var(--light-blue);
+          border-radius: 15px;
+          box-shadow: 0 7px 18px rgba(27, 58, 92, 0.09);
+        }
+        
+        .software-poll-title {
+          margin-bottom: 14px;
+          color: var(--navy);
+          font-size: 21px;
+          font-weight: 800;
+        }
+        
+        .software-options {
+          display: grid;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 11px;
+        }
+        
+        .software-option {
+          display: grid;
+          grid-template-columns: 28px minmax(0, 1fr);
+          align-items: center;
+          gap: 10px;
+          padding: 11px 12px;
+          background: var(--soft-bg);
+          border: 1px solid #e1ebf3;
+          border-radius: 9px;
+        }
+        
+        .software-checkbox {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 23px;
+          height: 23px;
+          border: 2px solid var(--teal);
+          border-radius: 5px;
+          color: var(--teal);
+          font-size: 13px;
+          font-weight: 800;
+        }
+        
+        .software-option-text {
+          color: var(--text);
+          font-size: 14px;
+          font-weight: 700;
+        }
+        
+        .software-provide {
+          padding: 22px;
+          background: var(--light-green);
+          border-top: 6px solid var(--green);
+          border-radius: 15px;
+          box-shadow: 0 7px 18px rgba(27, 58, 92, 0.08);
+        }
+        
+        .software-provide-label {
+          color: var(--green);
+          font-size: 11px;
+          font-weight: 800;
+          letter-spacing: 0.12em;
+          text-transform: uppercase;
+        }
+        
+        .software-provide-title {
+          margin: 5px 0 16px;
+          color: var(--navy);
+          font-size: 23px;
+          font-weight: 800;
+        }
+        
+        .software-resource {
+          display: grid;
+          grid-template-columns: 38px minmax(0, 1fr);
+          align-items: start;
+          gap: 12px;
+          margin-bottom: 14px;
+          padding: 12px 13px;
+          background: rgba(255, 255, 255, 0.72);
+          border-radius: 9px;
+        }
+        
+        .software-resource-icon {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 34px;
+          height: 34px;
+          background: #ffffff;
+          border-radius: 50%;
+          font-size: 17px;
+        }
+        
+        .software-resource-title {
+          color: var(--navy);
+          font-size: 14px;
+          font-weight: 800;
+        }
+        
+        .software-resource-text {
+          margin-top: 2px;
+          color: #5f6c78;
+          font-size: 12px;
+          line-height: 1.35;
+        }
+        
+        .software-warning {
+          margin-top: 14px;
+          padding: 11px 14px;
+          background: #fff3cd;
+          border-left: 5px solid #f0a500;
+          border-radius: 9px;
+          color: #6f5d24;
+          font-size: 12.5px;
+          line-height: 1.35;
+        }
+        
+        @media (max-width: 900px) {
+          .reading-grid,
+          .software-layout {
+            grid-template-columns: 1fr;
+          }
+        }`
+
+
+        /* Final Q&A slide */
+        
+        .qa-slide {
+          display: grid !important;
+          grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr) !important;
+          gap: 22px;
+          margin-top: 16px;
+          width: 100%;
+          align-items: stretch;
+        }
+        
+        .qa-main {
+          min-height: 390px;
+          height: auto;
+          padding: 28px 32px;
+          box-sizing: border-box;
+        }
+
+        .qa-contact-panel {
+          min-height: 390px;
+          height: auto;
+          padding: 24px;
+          box-sizing: border-box;
+        }
+        
+        .qa-main::after {
+          content: "?";
+          position: absolute;
+          right: 10px;
+          bottom: -72px;
+        
+          color: rgba(255, 255, 255, 0.06);
+          font-size: 280px;
+          font-weight: 900;
+          line-height: 1;
+        }
+        
+        .qa-eyebrow,
+        .qa-title,
+        .qa-subtitle,
+        .qa-divider,
+        .qa-prompts {
+          position: relative;
+          z-index: 1;
+        }
+        
+        .qa-eyebrow {
+          color: #9edfe0;
+          font-size: 12px;
+          font-weight: 800;
+          letter-spacing: 0.16em;
+          text-transform: uppercase;
+        }
+        
+        .qa-title {
+          margin-top: 8px;
+          color: #ffffff;
+          font-size: 44px;
+          font-weight: 850;
+          line-height: 1.05;
+        }
+        
+        .qa-subtitle {
+          max-width: 92%;
+          margin-top: 12px;
+          color: #d6e8f7;
+          font-size: 15px;
+          line-height: 1.4;
+        }
+        
+        .qa-divider {
+          width: 64px;
+          height: 4px;
+          margin: 21px 0 18px;
+          background: #5ad0d2;
+          border-radius: 999px;
+        }
+        
+        .qa-prompts {
+          color: #ffffff;
+          font-size: 13px;
+          line-height: 1.6;
+        }
+        
+        .qa-prompts strong {
+          color: #9edfe0;
+        }
+        
+        
+        .qa-contact-label {
+          color: var(--teal);
+          font-size: 11px;
+          font-weight: 800;
+          letter-spacing: 0.13em;
+          text-transform: uppercase;
+        }
+        
+        .qa-contact-title {
+          margin: 5px 0 16px;
+          color: var(--navy);
+          font-size: 23px;
+          font-weight: 800;
+        }
+        
+        .qa-contact-card {
+          margin-bottom: 12px;
+          padding: 13px 15px;
+        
+          background: var(--soft-bg);
+          border-left: 5px solid var(--teal);
+          border-radius: 10px;
+        }
+        
+        .qa-contact-name {
+          color: var(--navy);
+          font-size: 16px;
+          font-weight: 800;
+        }
+        
+        .qa-contact-role {
+          margin-top: 2px;
+          color: var(--muted);
+          font-size: 11px;
+        }
+        
+        .qa-contact-email {
+          margin-top: 6px;
+          color: var(--teal);
+          font-size: 12px;
+          font-weight: 700;
+          overflow-wrap: anywhere;
+        }
+        
+        .qa-contact-email a {
+          color: var(--teal) !important;
+          text-decoration: none;
+        }
+        
+        .qa-thanks {
+          margin-top: 15px;
+          padding: 11px 13px;
+        
+          background: var(--light-green);
+          border-left: 5px solid var(--green);
+          border-radius: 9px;
+        
+          color: #286b5b;
+          font-size: 11.5px;
+          line-height: 1.35;
+        }
+        @media (max-width: 900px) {
+          .qa-slide {
+            grid-template-columns: 1fr;
+          }
+        }
+
+        .reveal .qa-slide {
+          grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr) !important;
+        }
+        </style>
+execute:
+  echo: false
+---
+
+## Agenda
+
+```{=html}
+<div class="agenda-grid">
+  <div class="agenda-card">
+    <div class="agenda-number">01</div>
+    <div class="agenda-content">Introductions</div>
+  </div>
+
+  <div class="agenda-card">
+    <div class="agenda-number">02</div>
+    <div class="agenda-content">Structure and Roles</div>
+  </div>
+
+  <div class="agenda-card">
+    <div class="agenda-number">03</div>
+    <div class="agenda-content">Conference Navigation</div>
+  </div>
+
+  <div class="agenda-card">
+    <div class="agenda-number">04</div>
+    <div class="agenda-content">Readings and Preparation</div>
+  </div>
+
+  <div class="agenda-card">
+    <div class="agenda-number">05</div>
+    <div class="agenda-content">Software Setup</div>
+  </div>
+
+  <div class="agenda-card">
+    <div class="agenda-number">06</div>
+    <div class="agenda-content">Questions and Next Steps</div>
+  </div>
+</div>
+
+<div class="recording-note">
+🎥 This meeting will be recorded and shared with participants who are unable to attend.
+</div>
+```
+
+---
+
+## Introductions
+
+```{=html}
+<div class="intro-layout">
+  <div class="intro-welcome">
+    <div class="intro-eyebrow">WELCOME TO</div>
+    <div class="intro-psymca">ΨMCA 2026</div>
+    <div class="intro-tagline">
+      Advanced Psychometric Methods for Cognitive Aging Research
+    </div>
+    <div class="intro-divider"></div>
+    <div class="intro-message">
+      This group brings together participants at
+      <strong>all career stages</strong> - from graduate students to senior investigators.
+    </div>
+    <div class="intro-highlight">
+      Every person here has something valuable to contribute.
+    </div>
+    <div class="intro-closing">
+      We are glad you are here.
+    </div>
+  </div>
+
+  <div class="intro-prompt">
+    <h3>Let's get to know each other</h3>
+    <div class="intro-instruction">Please briefly share:</div>
+
+    <div class="intro-item">
+      <div class="intro-number">01</div>
+      <div class="intro-item-text"><strong>Your name and institution</strong></div>
+    </div>
+
+    <div class="intro-item">
+      <div class="intro-number">02</div>
+      <div class="intro-item-text"><strong>Your current role or career stage</strong></div>
+    </div>
+
+    <div class="intro-item">
+      <div class="intro-number">03</div>
+      <div class="intro-item-text"><strong>Your research or methodological interests</strong></div>
+    </div>
+
+    <div class="intro-item">
+      <div class="intro-number">04</div>
+      <div class="intro-item-text"><strong>One thing you hope to gain from ΨMCA</strong></div>
+    </div>
+  </div>
+</div>
+```
+
+---
+
+## About Our Workgroup
+
+```{=html}
+<div class="wg-overview">
+
+  <div class="wg-hero">
+    <div class="wg-label">WORKGROUP 1</div>
+    <div class="wg-title">Validation of Classification</div>
+    <div class="wg-subtitle">
+      How well do clinical and algorithmic classifications reflect underlying disease and predict future cognitive decline?
+    </div>
+  </div>
+
+  <div class="wg-grid">
+    <div class="wg-card">
+      <div class="wg-icon">01</div>
+      <div class="wg-card-title">Why this matters</div>
+      <div class="wg-card-text">
+        Clinical diagnosis is widely used to stage cognitive impairment and brain injury or degeneration, and to predict future decline.
+      </div>
+    </div>
+
+    <div class="wg-card">
+      <div class="wg-icon">02</div>
+      <div class="wg-card-title">The current gap</div>
+      <div class="wg-card-text">
+        Algorithmic classifications are often evaluated against clinical diagnosis as the "gold standard," but both approaches are rarely compared directly against external validation criteria.
+      </div>
+    </div>
+
+    <div class="wg-card">
+      <div class="wg-icon">03</div>
+      <div class="wg-card-title">Our goal</div>
+      <div class="wg-card-text">
+        Validate clinical diagnosis, algorithmic classification, and machine learning predictions against disease biomarkers and future progression of cognitive impairment.
+      </div>
+    </div>
+  </div>
+
+  <div class="wg-comparison">
+    <div class="wg-comparison-title">Classification approaches we will compare</div>
+
+   <div class="wg-validation">
+      <div class="wg-validation-label">We will validate </div>
+      <div class="wg-validation-item-long">clinical, algorithmic classification, and machine learning-based predictions</div>
+    </div>
+
+    <div class="wg-validation">
+      <div class="wg-validation-label"> against</div>
+      <div class="wg-validation-item">longitudinal MRI</div>
+      <div class="wg-validation-item">other disease biomarkers</div>
+      <div class="wg-validation-item">future cognitive progression</div>
+    </div>
+  </div>
+
+  <div class="wg-dataset">
+    <span class="wg-dataset-label">DATASET</span>
+    <span class="wg-dataset-name">UC Davis Alzheimer's Disease Research Center</span>
+  </div>
+
+</div>
+```
+
+
+
+
+
+## Potential Project Ideas
+
+<div class="project-intro">
+Multiple options to support subgroups with varying interests and skill levels
+</div>
+
+```{=html}
+<div class="project-grid">
+
+  <div class="project-card">
+    <div class="project-letter">A</div>
+    <div class="project-title">Example project A: </div>
+    <div class="project-description">
+      Compare the predictive validity of three dementia classification approaches:
+      <ul>
+    <li>Clinical diagnosis</li>
+    <li>Decision rule-based classification</li>
+    <li>Machine learning-based classification</li>
+  </ul> <br>
+using longitudinal MRI measures as the external validation criterion.
+    </div>
+    <div class="project-methods">
+      <span class="project-methods-label">Methods</span>
+     Mixed effects longitudinal models
+    </div>
+  </div>
+
+  <div class="project-card">
+    <div class="project-letter">B</div>
+    <div class="project-title">Example project B: </div>
+    <div class="project-description">
+      Compare the predictive validity of two dementia classification approaches:
+      <ul>
+    <li>Clinical diagnosis</li>
+    <li>Decision rule-based classification</li>
+  </ul> <br>
+for future cognitive decline.<br>
+<br> * Machine learning-based classification used cognitive data as predictors.
+    </div>
+    <div class="project-methods">
+      <span class="project-methods-label">Methods</span>
+      Mixed effects longitudinal models
+    </div>
+  </div>
+
+
+
+</div>
+
+
+
+<div class="project-footer">
+  <div class="project-footer-icon">→</div>
+  <div>
+    <div class="project-footer-title">
+      These are example project ideas. We encourage participants to propose additional ideas, and we will finalize projects together on Day 1 in Tahoe.
+    </div>
+    <div class="project-footer-text">
+      We will match participants' interests, experience, and preferred methods
+      to the available projects.
+    </div>
+  </div>
+</div>
+```
+
+
+
+
+
+
+## Structure and Roles
+
+```{=html}
+<div class="roles-layout">
+
+  <div class="roles-leads">
+
+    <div class="roles-eyebrow">WORKGROUP CO-LEADS</div>
+    <div class="roles-heading">How we will support the group</div>
+
+    <div class="roles-lead-card">
+      <div class="roles-lead-name">Dan Mungas</div>
+      <div class="roles-lead-role">
+        Dataset preparation, UC Davis ADRC expertise, and guidance on cognitive
+        classification and measurement.
+      </div>
+    </div>
+
+    <div class="roles-lead-card">
+      <div class="roles-lead-name">Jingxuan Wang</div>
+      <div class="roles-lead-role">
+        Project coordination, analysis planning, methodological discussion,
+        and subgroup support.
+      </div>
+    </div>
+
+    <div class="roles-shared">
+      <div class="roles-shared-title">Shared responsibilities</div>
+      <div class="roles-shared-text">
+        Facilitate discussion, clarify tasks, monitor inclusion, troubleshoot
+        barriers, and help move each project toward a concrete product.
+      </div>
+    </div>
+
+  </div>
+
+<div class="roles-workflow">
+
+  <div class="role-step">
+    <div class="role-step-number">01</div>
+    <div>
+      <div class="role-step-title">Walk through the dataset</div>
+      <div class="role-step-text">
+        Become familiar with the UC Davis ADRC data, available variables,
+        biomarkers, and documentation.
+      </div>
+    </div>
+  </div>
+
+  <div class="role-step">
+    <div class="role-step-number">02</div>
+    <div>
+      <div class="role-step-title">Discuss project directions</div>
+      <div class="role-step-text">
+        Review the example projects, brainstorm additional ideas, and identify
+        the most promising research questions.
+      </div>
+    </div>
+  </div>
+
+
+  <div class="role-step">
+    <div class="role-step-number">03</div>
+    <div>
+      <div class="role-step-title">Choose a project subgroup</div>
+      <div class="role-step-text">
+        Participants will join a project based on scientific interests,
+        methodological experience, and learning goals.
+      </div>
+    </div>
+  </div>
+
+  <div class="role-step">
+    <div class="role-step-number">04</div>
+    <div>
+      <div class="role-step-title">Define individual responsibilities</div>
+      <div class="role-step-text">
+        Assign clear roles such as literature review, coding, analysis,
+        visualization, interpretation, or writing.
+      </div>
+    </div>
+  </div>
+
+  <div class="role-step">
+    <div class="role-step-number">05</div>
+    <div>
+      <div class="role-step-title">Collaborate throughout the week</div>
+      <div class="role-step-text">
+        Work closely with teammates, share ideas, review code, and support
+        each other's progress.
+      </div>
+    </div>
+  </div>
+
+  <div class="role-step">
+    <div class="role-step-number">06</div>
+    <div>
+      <div class="role-step-title">Daily check-ins</div>
+      <div class="role-step-text">
+        Set daily goals, review progress, troubleshoot barriers, and adjust
+        tasks as needed.
+      </div>
+    </div>
+  </div>
+
+  <div class="roles-principle">
+    <div class="roles-principle-icon">◎</div>
+    <div>
+      <div class="roles-principle-title">Our guiding principle</div>
+      <div class="roles-principle-text">
+        Everyone should have a meaningful opportunity to contribute, and,
+        where feasible, everyone should work directly with the data.
+      </div>
+    </div>
+  </div>
+
+</div>
+```
+
+
+
+
+
+
+
+
+
+
+
+
+## Conference Navigation: Goals, Expectations & Culture
+
+```{=html}
+<div class="culture-grid">
+
+  <div class="culture-panel culture-panel-navy">
+    <div class="culture-label">Our goals</div>
+    <div class="culture-title">What we hope to accomplish</div>
+
+    <div class="culture-item">
+      <div class="culture-check">01</div>
+      <div>Conduct <strong>meaningful, publishable research</strong>.</div>
+    </div>
+
+    <div class="culture-item">
+      <div class="culture-check">02</div>
+      <div>Practice collaborative <strong>team science</strong>.</div>
+    </div>
+
+    <div class="culture-item">
+      <div class="culture-check">03</div>
+      <div>Give everyone an opportunity to interact directly with the <strong>data</strong>.</div>
+    </div>
+
+    <div class="culture-item">
+      <div class="culture-check">04</div>
+      <div>Lay the groundwork for a manuscript or other concrete research product.</div>
+    </div>
+  </div>
+
+  <div class="culture-panel culture-panel-blue">
+    <div class="culture-label">From the co-leads</div>
+    <div class="culture-title">What to expect from us</div>
+
+    <div class="culture-item">
+      <div class="culture-check">✓</div>
+      <div>Clear tasks and division of responsibilities.</div>
+    </div>
+
+    <div class="culture-item">
+      <div class="culture-check">✓</div>
+      <div>Daily check-ins, goal-setting, and progress reviews.</div>
+    </div>
+
+
+    <div class="culture-item">
+      <div class="culture-check">✓</div>
+      <div>Transparent and empathetic communication.</div>
+    </div>
+
+    <div class="culture-item">
+      <div class="culture-check">✓</div>
+      <div>Recognition of individual contributions.</div>
+    </div>
+  </div>
+
+  <div class="culture-panel culture-panel-green">
+    <div class="culture-label">From participants</div>
+    <div class="culture-title">What we ask of you</div>
+
+    <div class="culture-item">
+      <div class="culture-check">✓</div>
+      <div>Arrive <strong>prepared</strong> with readings and software completed.</div>
+    </div>
+
+    <div class="culture-item">
+      <div class="culture-check">✓</div>
+      <div>Engage actively, ask questions, and share ideas.</div>
+    </div>
+
+    <div class="culture-item">
+      <div class="culture-check">✓</div>
+      <div>Collaborate with people you do not already know.</div>
+    </div>
+
+    <div class="culture-item">
+      <div class="culture-check">✓</div>
+      <div>Communicate early when questions or concerns arise.</div>
+    </div>
+  </div>
+
+</div>
+```
+
+
+
+
+
+
+
+---
+
+## Welcome, First-Time Attendees!
+
+```{=html}
+<div class="firsttime-layout">
+
+  <div class="firsttime-cards">
+
+    <div class="firsttime-card">
+      <div class="firsttime-icon">📅</div>
+      <div class="firsttime-title">Dates and Location</div>
+      <div class="firsttime-text">
+        August 9-14, 2026, in Tahoe. Most of the week is spent in focused
+        workgroup sessions.
+      </div>
+    </div>
+
+    <div class="firsttime-card">
+      <div class="firsttime-icon">🤝</div>
+      <div class="firsttime-title">Intensive Collaboration</div>
+      <div class="firsttime-text">
+        You will work closely with the same group throughout the week.
+        Deep collaboration takes time - this is intentional.
+      </div>
+    </div>
+
+    <div class="firsttime-card">
+      <div class="firsttime-icon">💡</div>
+      <div class="firsttime-title">Questions Are Welcome</div>
+      <div class="firsttime-text">
+        Junior and senior attendees work side by side. Questions and
+        methodological discussions are encouraged.
+      </div>
+    </div>
+
+    <div class="firsttime-card">
+      <div class="firsttime-icon">🍽️</div>
+      <div class="firsttime-title">Meals and Social Time</div>
+      <div class="firsttime-text">
+        Informal conversations are an important part of the experience.
+        Try to connect with new people throughout the week.
+      </div>
+    </div>
+
+  </div>
+
+  <div class="firsttime-links">
+    <div class="firsttime-links-title">Helpful resources</div>
+
+    <div class="firsttime-link">
+      <div class="firsttime-link-label">Orientation</div>
+      <a href="https://psymca.org/%cf%88mca-for-beginners/">
+        Psy-MCA for Beginners
+      </a>
+    </div>
+
+    <div class="firsttime-link">
+      <div class="firsttime-link-label">Schedule</div>
+      <a href="https://psymca.org/2026-conference/schedule-2026/">
+        2026 Conference Schedule
+      </a>
+    </div>
+
+    <div class="firsttime-link">
+      <div class="firsttime-link-label">Workgroups</div>
+      <a href="https://psymca.org/workgroups-2026/">
+        2026 Workgroup Descriptions
+      </a>
+    </div>
+
+    <div class="firsttime-contact">
+      <strong>Questions before Tahoe?</strong><br>
+      Contact Dan Mungas or Jingxuan Wang at any time.
+    </div>
+  </div>
+
+</div>
+```
+
+
+
+
+
+
+
+
+---
+
+## Join the Psy-MCA 2026 Community
+
+```{=html}
+<div class="community-layout">
+
+  <div class="discord-panel">
+    <div class="discord-eyebrow">Stay connected</div>
+    <div class="discord-title">Join the Discord server</div>
+
+    <div class="discord-text">
+      Connect with other attendees before Tahoe, introduce yourself,
+      ask questions, and share useful resources.
+    </div>
+
+    <div class="discord-code">
+      discord.gg/Zwn9MJAmY
+    </div>
+
+    <div class="discord-callout">
+      Join the Workgroup 1 channel so you can connect with your teammates
+      and receive updates before the conference.
+    </div>
+  </div>
+
+  <div class="community-links">
+
+    <div class="community-link-card">
+      <div class="community-link-label">Orientation</div>
+      <div class="community-link-title">Psy-MCA for Beginners</div>
+      <a href="https://psymca.org/%cf%88mca-for-beginners/">
+        psymca.org/ψmca-for-beginners
+      </a>
+    </div>
+
+    <div class="community-link-card">
+      <div class="community-link-label">Conference planning</div>
+      <div class="community-link-title">2026 Conference Schedule</div>
+      <a href="https://psymca.org/2026-conference/schedule-2026/">
+        psymca.org/2026-conference/schedule-2026
+      </a>
+    </div>
+
+    <div class="community-link-card">
+      <div class="community-link-label">Scientific program</div>
+      <div class="community-link-title">2026 Workgroup Descriptions</div>
+      <a href="https://psymca.org/workgroups-2026/">
+        psymca.org/workgroups-2026
+      </a>
+    </div>
+
+    <div class="community-recording">
+      📹 <strong>Recording:</strong> This pre-conference meeting is being
+      recorded and will be shared with participants who are unable to attend.
+    </div>
+
+  </div>
+
+</div>
+```
+
+
+
+
+
+---
+
+## Authorship - Let's Talk About It Early
+
+<div class="authorship-intro">
+We will revisit authorship on Day 1 in Tahoe. These are guiding principles rather than fixed mandates.
+</div>
+
+```{=html}
+<div class="authorship-grid">
+
+  <div class="authorship-card">
+    <div class="authorship-number">01</div>
+    <div>
+      <div class="authorship-title">Start the conversation early</div>
+      <div class="authorship-text">
+        Discuss potential roles, products, and authorship expectations
+        when projects and subgroups are established.
+      </div>
+    </div>
+  </div>
+
+  <div class="authorship-card">
+    <div class="authorship-number">02</div>
+    <div>
+      <div class="authorship-title">Encourage junior leadership</div>
+      <div class="authorship-text">
+        Junior members should be supported in considering first-author roles,
+        while senior members may contribute in senior or supporting positions.
+      </div>
+    </div>
+  </div>
+  
+    <div class="authorship-card">
+    <div class="authorship-number">03</div>
+    <div>
+      <div class="authorship-title">The first author leads</div>
+      <div class="authorship-text">
+        First authorship involves substantial responsibility for coordination,
+        drafting, revisions, and moving the project toward completion.
+      </div>
+    </div>
+  </div>
+
+  <div class="authorship-card">
+    <div class="authorship-number">04</div>
+    <div>
+      <div class="authorship-title">Authorship requires contribution</div>
+      <div class="authorship-text">
+        Contributions may include analysis, coding, interpretation, writing,
+        visualization, or substantive review. Membership alone is not sufficient.
+      </div>
+    </div>
+  </div>
+
+  <div class="authorship-card">
+    <div class="authorship-number">05</div>
+    <div>
+      <div class="authorship-title">Order reflects contribution</div>
+      <div class="authorship-text">
+        Authorship order should reflect relative substantive contributions,
+        not career stage or seniority.
+      </div>
+    </div>
+  </div>
+
+
+
+</div>
+
+<div class="authorship-note">
+  <div class="authorship-note-icon">✦</div>
+  <div class="authorship-note-text">
+    Each workgroup may adapt these norms. We will aim for transparency,
+    fairness, and ongoing discussion as contributions evolve.
+  </div>
+</div>
+```
+
+
+
+
+
+---
+
+## Readings and Preparation
+
+
+```{=html}
+<div class="reading-grid">
+
+  <div class="reading-panel reading-panel-blue">
+    <div class="reading-label">Core concepts</div>
+    <div class="reading-title">Machine learning-based classification</div>
+
+    <div class="reading-item">
+      <div class="reading-citation">Mungas et al., 2025</div>
+      <div class="reading-description">
+      Machine learning diagnosis of cognitive impairment and dementia in harmonized older adult cohorts
+      </br>
+      <a href="https://pubmed.ncbi.nlm.nih.gov/40747592/">
+      [link]
+      </a>
+       
+      </div>
+    </div>
+
+   
+  </div>
+
+  <div class="reading-panel reading-panel-green">
+    <div class="reading-label">Analytic preparation</div>
+    <div class="reading-title">Classification validation</div>
+
+    <div class="reading-item">
+      <div class="reading-citation">Mungas et al. (preprint), 2026</div>
+      <div class="reading-description">
+        Validation of clinical diagnosis and machine learning classification of cognitive impairment
+      </div>
+      <div class="reading-link">[Will be shared]</div>
+    </div>
+
+   
+  </div>
+
+  <div class="reading-panel reading-panel-white">
+    <div class="reading-label">Data preparation</div>
+    <div class="reading-title">Dataset Documents</div>
+
+    <div class="reading-item">
+      <div class="reading-citation">UC Davis ADRC Codebook</div>
+      <div class="reading-description">
+        Variables, coding conventions, and study documentation
+      </div>
+      <div class="reading-link">[Will be shared]</div>
+    </div>
+
+   
+  </div>
+
+</div>
+
+<div class="reading-footer">
+  <div class="reading-footer-icon">⏱</div>
+  <div class="reading-footer-text">
+    Estimated reading time: <strong>approximately 2 hours</strong>.
+  </div>
+</div>
+```
+
+
+
+
+
+
+---
+
+## Software Setup
+
+```{=html}
+<div class="software-banner">
+  <div class="software-banner-icon">✓</div>
+  <div>
+    <div class="software-banner-title">
+      Please arrive with your statistical software installed and ready to use.
+    </div>
+    <div class="software-banner-text">
+      Test your installation, required packages, and access before traveling to Tahoe.
+    </div>
+  </div>
+</div>
+
+<div class="software-layout">
+
+  <div class="software-poll">
+    <div class="software-poll-title">Quick poll - what software do you use?</div>
+
+    <div class="software-options">
+
+      <div class="software-option">
+        <div class="software-checkbox"></div>
+        <div class="software-option-text">R / RStudio</div>
+      </div>
+
+      <div class="software-option">
+        <div class="software-checkbox"></div>
+        <div class="software-option-text">Stata</div>
+      </div>
+
+      <div class="software-option">
+        <div class="software-checkbox"></div>
+        <div class="software-option-text">Mplus</div>
+      </div>
+
+      <div class="software-option">
+        <div class="software-checkbox"></div>
+        <div class="software-option-text">Python</div>
+      </div>
+
+      <div class="software-option">
+        <div class="software-checkbox"></div>
+        <div class="software-option-text">SAS</div>
+      </div>
+
+      <div class="software-option">
+        <div class="software-checkbox"></div>
+        <div class="software-option-text">Other</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="software-provide">
+    <div class="software-provide-label">Resources</div>
+    <div class="software-provide-title">What we will have</div>
+
+
+
+    <div class="software-resource">
+      <div class="software-resource-icon">▣</div>
+      <div>
+        <div class="software-resource-title">Documented datasets</div>
+        <div class="software-resource-text">
+          Analysis files with codebooks, variable definitions, and supporting documentation.
+        </div>
+      </div>
+    </div>
+
+    <div class="software-resource">
+      <div class="software-resource-icon">☷</div>
+      <div>
+        <div class="software-resource-title">Analysis planning tools</div>
+        <div class="software-resource-text"> 
+          A shared document for variables, task division, and analysis planning.
+        </div>
+      </div>
+    </div>
+
+    <div class="software-warning">
+      <strong>Need help?</strong> Contact us before the conference if you have
+      installation, package, access, or compatibility problems.
+    </div>
+  </div>
+
+</div>
+```
+
+
+
+
+---
+
+## Questions & Discussion
+
+```{=html}
+<div style="
+  display:grid;
+  grid-template-columns:1.05fr 0.95fr;
+  gap:22px;
+  width:100%;
+  margin-top:16px;
+  align-items:stretch;
+">
+
+  <div style="
+    position:relative;
+    overflow:hidden;
+    min-height:390px;
+    padding:30px 34px;
+    box-sizing:border-box;
+    background:linear-gradient(145deg,#1b3a5c 0%,#245d88 100%);
+    color:#ffffff;
+    border-radius:18px;
+    box-shadow:0 10px 24px rgba(27,58,92,0.18);
+  ">
+
+    <div style="
+      color:#9edfe0;
+      font-size:12px;
+      font-weight:800;
+      letter-spacing:0.16em;
+      text-transform:uppercase;
+    ">
+      Open discussion
+    </div>
+
+    <div style="
+      margin-top:8px;
+      color:#ffffff;
+      font-size:44px;
+      font-weight:800;
+      line-height:1.05;
+    ">
+      Questions?
+    </div>
+
+    <div style="
+      max-width:92%;
+      margin-top:14px;
+      color:#d6e8f7;
+      font-size:15px;
+      line-height:1.4;
+    ">
+      Please share any questions, concerns, project ideas, or suggestions
+      before we begin our work together in Tahoe.
+    </div>
+
+    <div style="
+      width:64px;
+      height:4px;
+      margin:22px 0 19px;
+      background:#5ad0d2;
+      border-radius:999px;
+    "></div>
+
+    <div style="
+      color:#ffffff;
+      font-size:13px;
+      line-height:1.65;
+    ">
+      <strong style="color:#9edfe0;">Topics we can discuss</strong><br>
+      Scientific questions and project ideas<br>
+      Dataset access and preparation<br>
+      Software or technical needs<br>
+      Conference logistics<br>
+      Roles, collaboration, and authorship
+    </div>
+
+    <div style="
+      position:absolute;
+      right:20px;
+      bottom:-65px;
+      color:rgba(255,255,255,0.07);
+      font-size:260px;
+      font-weight:900;
+      line-height:1;
+    ">
+      ?
+    </div>
+
+  </div>
+
+  <div style="
+    min-height:390px;
+    padding:25px 24px;
+    box-sizing:border-box;
+    background:#ffffff;
+    border:1px solid #d6e8f7;
+    border-radius:18px;
+    box-shadow:0 10px 24px rgba(27,58,92,0.10);
+  ">
+
+    <div style="
+      color:#00878a;
+      font-size:11px;
+      font-weight:800;
+      letter-spacing:0.13em;
+      text-transform:uppercase;
+    ">
+      Stay in touch
+    </div>
+
+    <div style="
+      margin:5px 0 16px;
+      color:#1b3a5c;
+      font-size:23px;
+      font-weight:800;
+    ">
+      Contact the co-leads
+    </div>
+
+    <div style="
+      margin-bottom:12px;
+      padding:14px 16px;
+      background:#f4f7fb;
+      border-left:5px solid #00878a;
+      border-radius:10px;
+    ">
+      <div style="
+        color:#1b3a5c;
+        font-size:16px;
+        font-weight:800;
+      ">
+        Dan Mungas
+      </div>
+
+      <div style="
+        margin-top:2px;
+        color:#66717e;
+        font-size:11px;
+      ">
+        Workgroup Co-Lead
+      </div>
+
+      <div style="
+        margin-top:7px;
+        color:#00878a;
+        font-size:12px;
+        font-weight:700;
+      ">
+        <a href="mailto:DAN_EMAIL_HERE"
+           style="color:#00878a;text-decoration:none;">
+          dmmungas@health.ucdavis.edu
+        </a>
+      </div>
+    </div>
+
+    <div style="
+      margin-bottom:12px;
+      padding:14px 16px;
+      background:#f4f7fb;
+      border-left:5px solid #00878a;
+      border-radius:10px;
+    ">
+      <div style="
+        color:#1b3a5c;
+        font-size:16px;
+        font-weight:800;
+      ">
+        Jingxuan Wang
+      </div>
+
+      <div style="
+        margin-top:2px;
+        color:#66717e;
+        font-size:11px;
+      ">
+        Workgroup Co-Lead
+      </div>
+
+      <div style="
+        margin-top:7px;
+        color:#00878a;
+        font-size:12px;
+        font-weight:700;
+      ">
+        <a href="mailto:JINGXUAN_EMAIL_HERE"
+           style="color:#00878a;text-decoration:none;">
+          jingxuanwang@hsph.harvard.edu
+        </a>
+      </div>
+    </div>
+
+    <div style="
+      margin-top:15px;
+      padding:12px 14px;
+      background:#e8f8f5;
+      border-left:5px solid #00875a;
+      border-radius:9px;
+      color:#286b5b;
+      font-size:11.5px;
+      line-height:1.4;
+    ">
+      <strong>Thank you for joining us.</strong><br>
+      We look forward to a productive, inclusive, and collaborative week
+      at ΨMCA 2026.
+    </div>
+
+  </div>
+
+</div>
+```
+
+
+
+
+
+
+
