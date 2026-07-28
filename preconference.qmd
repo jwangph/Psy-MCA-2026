@@ -2,8 +2,8 @@
 title: "ΨMCA 2026"
 subtitle: "Pre-Conference Workgroup Meeting<br>Workgroup 1: Validation of Classification"
 author:
-  - "Dan Mungas"
   - "Jingxuan Wang"
+  - "Dan Mungas"
 date: "August 5, 2026"
 format:
   revealjs:
@@ -1825,6 +1825,15 @@ for future cognitive decline.<br>
 
     <div class="roles-eyebrow">WORKGROUP CO-LEADS</div>
     <div class="roles-heading">How we will support the group</div>
+    
+    
+    <div class="roles-lead-card">
+      <div class="roles-lead-name">Jingxuan Wang</div>
+      <div class="roles-lead-role">
+        Project coordination, analysis planning, methodological discussion,
+        and subgroup support.
+      </div>
+    </div>
 
     <div class="roles-lead-card">
       <div class="roles-lead-name">Dan Mungas</div>
@@ -1834,13 +1843,7 @@ for future cognitive decline.<br>
       </div>
     </div>
 
-    <div class="roles-lead-card">
-      <div class="roles-lead-name">Jingxuan Wang</div>
-      <div class="roles-lead-role">
-        Project coordination, analysis planning, methodological discussion,
-        and subgroup support.
-      </div>
-    </div>
+
 
     <div class="roles-shared">
       <div class="roles-shared-title">Shared responsibilities</div>
@@ -2109,7 +2112,7 @@ for future cognitive decline.<br>
 
     <div class="firsttime-contact">
       <strong>Questions before Tahoe?</strong><br>
-      Contact Dan Mungas or Jingxuan Wang at any time.
+      Contact Jingxuan Wang or Dan Mungas at any time.
     </div>
   </div>
 
@@ -2575,6 +2578,42 @@ We will revisit authorship on Day 1 in Tahoe. These are guiding principles rathe
         font-size:16px;
         font-weight:800;
       ">
+      Jingxuan Wang
+      </div>
+
+      <div style="
+        margin-top:2px;
+        color:#66717e;
+        font-size:11px;
+      ">
+        Workgroup Co-Lead
+      </div>
+
+      <div style="
+        margin-top:7px;
+        color:#00878a;
+        font-size:12px;
+        font-weight:700;
+      ">
+        <a href="mailto:JINGXUAN_EMAIL_HERE"
+           style="color:#00878a;text-decoration:none;">
+          jingxuanwang@hsph.harvard.edu
+        </a>
+      </div>
+    </div>
+
+    <div style="
+      margin-bottom:12px;
+      padding:14px 16px;
+      background:#f4f7fb;
+      border-left:5px solid #00878a;
+      border-radius:10px;
+    ">
+      <div style="
+        color:#1b3a5c;
+        font-size:16px;
+        font-weight:800;
+      ">
         Dan Mungas
       </div>
 
@@ -2596,42 +2635,7 @@ We will revisit authorship on Day 1 in Tahoe. These are guiding principles rathe
            style="color:#00878a;text-decoration:none;">
           dmmungas@health.ucdavis.edu
         </a>
-      </div>
-    </div>
-
-    <div style="
-      margin-bottom:12px;
-      padding:14px 16px;
-      background:#f4f7fb;
-      border-left:5px solid #00878a;
-      border-radius:10px;
-    ">
-      <div style="
-        color:#1b3a5c;
-        font-size:16px;
-        font-weight:800;
-      ">
-        Jingxuan Wang
-      </div>
-
-      <div style="
-        margin-top:2px;
-        color:#66717e;
-        font-size:11px;
-      ">
-        Workgroup Co-Lead
-      </div>
-
-      <div style="
-        margin-top:7px;
-        color:#00878a;
-        font-size:12px;
-        font-weight:700;
-      ">
-        <a href="mailto:JINGXUAN_EMAIL_HERE"
-           style="color:#00878a;text-decoration:none;">
-          jingxuanwang@hsph.harvard.edu
-        </a>
+        
       </div>
     </div>
 
